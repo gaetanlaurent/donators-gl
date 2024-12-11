@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Donators List</title>
+    <script src="https://kit.fontawesome.com/72ce7beca3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <aside>
+        <h3 class="categories">Filters:</h3>
+        <button id="all-donators">
+            <i class="fa-solid fa-users"></i> All donators
+        </button>
+        <button id="male-donators">
+            <i class="fa-solid fa-mars"></i> Male donators
+        </button>
+        <button id="female-donators">
+            <i class="fa-solid fa-venus"></i> Female donators
+        </button>
+        <h3 class="categories">Sort by:</h3>
+        <button id="sort-amount">
+            <i class="fa-solid fa-euro-sign"></i> Amount donated
+        </button>
+        <button id="sort-alphabetical">
+            <i class="fa-solid fa-a"></i> Alphabetical order
+        </button>
+        <div id="search-container">
+            <i class="fa-solid fa-magnifying-glass">
+                <input type="text" id="search-bar" placeholder="Rechercher un donateur...">
+            </i>
+        </div>        
+    </aside>
+    <div id="app" class="list-of-donators">
+        <!-- Le contenu sera inséré ici par JavaScript -->
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

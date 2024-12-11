@@ -1,0 +1,229 @@
+/* styles.css */
+body {
+    font-family: "DM Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-color: #ffffff;
+}
+
+.categories {
+    text-align: center;
+    font-weight: normal;
+}
+
+.selected {
+    background-color: #aaaaaa; 
+    color: #ffffff;
+}
+
+aside {
+    width: 250px;
+    background-color: #3c6c8c;
+    color: white;
+    box-sizing: border-box;
+    height: 100vh;
+    position: fixed;
+    padding-top: 45px;
+    display: flex;
+    flex-direction: column;
+    transition: background-color 0.3s ease;
+}
+
+aside button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #2d5169;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+}
+
+aside button:hover {
+    background-color: #35617C;
+    transform: scale(1.02, 1.02);
+}
+
+aside button.selected {
+    background-color: #ffffff;
+    color: #448fff;
+}
+
+#app {
+    margin-left: 250px;
+    padding: 30px;
+    box-sizing: border-box;
+    width: calc(100% - 250px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#title {
+    text-align: center;
+    color: #ffffff;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    background-color: rgb(100, 100, 255);
+    padding: 30px;
+    width: 100%;
+    margin-top: -30px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.list-of-donators {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Grille responsive */
+    gap: 20px;
+    width: 100%;
+}
+
+.donator {
+    border: 1px solid #e0e0e0;
+    padding: 5px;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 0px 4px 2px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.donator:hover {
+    transform: translateY(-10px);
+}
+
+.donator img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+}
+
+.donator-info {
+    text-align: center;
+    width: 100%;
+}
+
+.donator-info h2 {
+    margin: 0 0 8px 0;
+    font-size: 22px;
+    font-weight: 600;
+    color: #484848;
+}
+
+.donator-info p {
+    margin: 5px 0;
+    color: #989898;
+}
+
+#don {
+    color: #29c84e;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#country {
+    font-weight: bold;
+}
+
+#search-container {
+    text-align: center;
+    margin: 30px 0;
+}
+
+#search-bar {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    aside {
+        padding-top: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        position: fixed;
+    }
+    aside button {
+        text-align: center;
+    }
+    #app {
+        margin-left: 0;
+        width: 100%;
+        margin-top: 410px;
+    }
+    #title {
+        position: fixed;
+        margin-bottom: 800px;
+        visibility: hidden;
+    }
+    .donator {
+        margin-top: 5px;
+    }
+    .donator:hover {
+        transform: translateY(0px);
+        position: fixed;
+        visibility: hidden;
+    }
+    aside button.selected {
+        background-color: #ffffff;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+    /* background-image: url(./images/bg-art.png);
+    background-size: 100% auto; */
+    background-color: #4e4e4e;
+    }
+    .donator {
+        border: 1px solid #666666;
+        background-color: rgb(50, 50, 50);
+    }
+    .donator-info h2 {
+        color: white;
+    }
+    .donator-info p {
+        color: rgb(222, 222, 222);
+    }
+    #don {
+        color: rgb(84, 255, 84);
+    }
+    aside {
+        background-color: #454646;
+        color: white;
+    }
+    aside button{
+        background-color: #383838;
+        color: white;
+    }
+    aside button:hover{
+        background-color: #272727;
+        color: white;
+    }
+    #title {
+        background-color: #272727;
+        color: white;
+    }
+    aside button.selected {
+        background-color: #1c1c1c;
+        color: #ffffff;
+    }
+    #search-bar {
+        border: 0px;
+        background-color: #272727;
+        color: white;
+    }
+}
