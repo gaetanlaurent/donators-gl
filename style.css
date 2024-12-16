@@ -136,7 +136,7 @@ aside button.selected {
 
 #search-container {
     text-align: center;
-    margin: 30px 0;
+    margin: 20px auto; /* Centrer la barre de recherche et ajouter de l'espace autour */
 }
 
 #search-bar {
@@ -145,6 +145,43 @@ aside button.selected {
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Container de pagination centré et espacement ajouté */
+#pagination {
+    display: flex;
+    justify-content: center; /* Centrer les boutons de pagination */
+    margin-left: 12px;
+    margin-bottom: 10px;
+    margin-top: 2px; /* Espacement entre la recherche et la pagination */
+    gap: 5px; /* Espacement entre les boutons */
+    width: 90%; /* S'assurer que la pagination occupe toute la largeur */
+}
+
+/* Style des boutons de pagination */
+#pagination button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2d5169;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Effet de survol sur les boutons */
+#pagination button:hover {
+    background-color: #35617C;
+    transform: scale(1.1);
+}
+
+/* Style pour le bouton actif */
+#pagination button.active {
+    background-color: #ffffff;
+    color: #448fff;
+    font-weight: bold;
 }
 
 @media (max-width: 768px) {
@@ -170,7 +207,7 @@ aside button.selected {
         visibility: hidden;
     }
     .donator {
-        margin-top: 5px;
+        margin-top: 50px;
     }
     .donator:hover {
         transform: translateY(0px);
@@ -179,6 +216,9 @@ aside button.selected {
     }
     aside button.selected {
         background-color: #ffffff;
+    }
+    #pagination {
+        margin-left: 20px;
     }
 }
 
@@ -225,5 +265,15 @@ aside button.selected {
         border: 0px;
         background-color: #272727;
         color: white;
+    }
+    #pagination button {
+        background-color: #383838;
+    }
+    #pagination button:hover {
+        background-color: #272727;
+    }
+    #pagination button.active {
+        background-color: #1c1c1c;
+        color: #ffffff;
     }
 }
