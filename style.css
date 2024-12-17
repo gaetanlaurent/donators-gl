@@ -140,7 +140,7 @@ aside button.selected {
 }
 
 #search-bar {
-    width: 80%;
+    width: 90%;
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ccc;
@@ -185,6 +185,11 @@ aside button.selected {
 }
 
 @media (max-width: 768px) {
+    .categories {
+        visibility: hidden;
+        margin: 0;
+        height: 0;
+    }
     aside {
         padding-top: 0;
         width: 100%;
@@ -199,15 +204,15 @@ aside button.selected {
     #app {
         margin-left: 0;
         width: 100%;
-        margin-top: 410px;
+        margin-top: 315px;
     }
     #title {
         position: fixed;
-        margin-bottom: 800px;
+        margin: 0px;
         visibility: hidden;
     }
     .donator {
-        margin-top: 50px;
+        margin-top: 5px;
     }
     .donator:hover {
         transform: translateY(0px);
